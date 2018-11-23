@@ -12,32 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :Nome %>
     <%= form.text_field :description %>
   </div>
 
   <div class="field">
-    <%= form.label :age %>
+    <%= form.label :Idade %>
     <%= form.number_field :age %>
   </div>
 
   <div class="field">
-    <%= form.label :telephone %>
+    <%= form.label :Telefone %>
     <%= form.text_field :telephone %>
   </div>
 
   <div class="field">
-    <%= form.label :quality %>
+    <%= form.label :Qualidade %>
     <%= form.text_field :quality %>
   </div>
 
   <div class="field">
-    <%= form.label :defect %>
+    <%= form.label :Dificuldades %>
     <%= form.text_field :defect %>
   </div>
 
   <div class="field">
-        <%= form.label :group_id %>
+        <%= form.label :Grupo %>
         <%= form.select("group_id", Group.all.collect {|g| [g.area, g.id] }, { include_blank: 'Selecione sua Area'}) %>
   </div>
 
