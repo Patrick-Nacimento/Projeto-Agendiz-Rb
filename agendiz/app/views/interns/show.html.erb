@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @intern.description %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @intern.age %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @intern.telephone %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @intern.quality %>
+</p>
+
+<p>
+  <strong>Defect:</strong>
+  <%= @intern.defect %>
+</p>
+
+<%= link_to 'Edit', edit_intern_path(@intern) %> |
+<%= link_to 'Back', interns_path %>

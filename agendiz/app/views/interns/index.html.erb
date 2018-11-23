@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Interns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Telefone</th>
+      <th>Qualidade</th>
+      <th>Ponto ser melhorado</th>
+      <th>Area</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @interns.each do |intern| %>
+      <tr>
+        <td><%= intern.description %></td>
+        <td><%= intern.age %></td>
+        <td><%= intern.telephone %></td>
+        <td><%= intern.quality %></td>
+        <td><%= intern.defect %></td>
+        <td><%= intern.group_id %></td>
+        <td><%= link_to 'Mostrar', intern %></td>
+        <td><%= link_to 'Editar', edit_intern_path(intern) %></td>
+        <td><%= link_to 'Excluir', intern, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Estagiario', new_intern_path %>

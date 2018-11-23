@@ -1,0 +1,47 @@
+<%= form_with(model: intern, local: true) do |form| %>
+  <% if intern.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(intern.errors.count, "error") %> prohibited this intern from being saved:</h2>
+
+      <ul>
+      <% intern.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telephone %>
+    <%= form.text_field :telephone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quality %>
+    <%= form.text_field :quality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :defect %>
+    <%= form.text_field :defect %>
+  </div>
+
+  <div class="field">
+        <%= form.label :group_id %>
+        <%= form.select("group_id", Group.all.collect {|g| [g.area, g.id] }, { include_blank: 'Selecione sua Area'}) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

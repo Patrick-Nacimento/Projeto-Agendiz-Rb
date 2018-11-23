@@ -1,0 +1,33 @@
+<h1><center>Seja Bem-Vindo ao Agendiz!!!</center></h1>
+
+<style>
+    body{
+    background-color:#4286f4;
+
+}
+li, h1, p{
+			color: #ffffff;
+			font-size: 35px;
+		}
+</style>
+
+
+    <p> <strong>Lista de Recrutadores </strong> </p>
+    <li>
+        <%= link_to "Recrutadores", recruiters_path %>
+    </li>
+
+    <p> <strong>Lista de Grupos de Estagiários </strong> </p>
+    <li>
+        <%= link_to "Grupos", groups_path%>
+    </li>
+    <p> <strong>Lista de Estagiários </strong> </p>
+    <li>
+        <%= link_to "Estagiarios", interns_path%>
+    </li>
+
+    
+
+<p><strong>Hoje é dia: </strong> <%= data_br(Date.today) %> </p>
+
+

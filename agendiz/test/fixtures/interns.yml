@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  age: 1
+  telephone: MyString
+  quality: MyString
+  defect: MyString
+
+two:
+  description: MyString
+  age: 1
+  telephone: MyString
+  quality: MyString
+  defect: MyString
